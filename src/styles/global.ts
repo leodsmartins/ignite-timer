@@ -27,5 +27,6 @@ export const GlobalStyle = createGlobalStyle`
     a{
         text-decoration: none;
         color: ${props => props.theme['gray-100']}
+        
     };
 `
