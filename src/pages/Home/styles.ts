@@ -78,7 +78,7 @@ export const Divider = styled.div`
   justify-content: center;
 `;
 
-export const ButtonContainer = styled.button`
+export const BaseCountdownButton = styled.button`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -99,5 +99,25 @@ export const ButtonContainer = styled.button`
 
   &:not(:disabled):hover {
     background: ${(props) => props.theme["green-700"]};
+  }
+`;
+
+export const StartCountdownButton = styled(BaseCountdownButton)`
+  
+  color: ${(props) => props.theme["gray-100"]};
+  background: ${(props) => props.theme["green-500"]};
+
+  &:not(:disabled):hover {
+    background: ${(props) => props.theme["green-700"]};
+  }
+`;
+
+
+export const StopCountdownButton = styled(BaseCountdownButton)`
+  color: ${(props) => props.theme["gray-100"]};
+  background: ${(props) => props.theme["red-500"]};
+
+  &:not(:disabled):hover {
+    background: ${(props) => props.theme["red-700"]};
   }
 `;
