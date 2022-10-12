@@ -134,37 +134,8 @@ export function Home() {
     return (
         <HomeContainer>
         <form onSubmit={handleSubmit(handleCreateNewCycle)} action="">
-            <FormContainer>
-            <label htmlFor="task">Vou trabalhar em</label>
-            <TaskInput
-                type="text"
-                id="task"
-                placeholder="Dê um nome para o seu projeto"
-                disabled={!!activeCycle}
-                {...register("task")}
-            />
-
-            <label htmlFor="minutesAmount">durante</label>
-            <MinutesAmountInput
-                type="number"
-                id="minutesAmount"
-                placeholder="00"
-                min={5}
-                max={60}
-                step={1}
-                disabled={!!activeCycle}
-                {...register("minutesAmount", { valueAsNumber: true })}
-            />
-
-            <span>minutos.</span>
-            </FormContainer>
-            <CountdownContainer>
-            <span>{minutes[0]}</span>
-            <span>{minutes[1]}</span>
-            <Divider>:</Divider>
-            <span>{seconds[0]}</span>
-            <span>{seconds[1]}</span>
-            </CountdownContainer>
+            
+      
 
             {activeCycle ? (
             <StopCountdownButton onClick={handleInterruptCycle} type="button">
